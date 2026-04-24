@@ -1,5 +1,17 @@
 # Coherent motions to predict Lagrangian trajectories
 
+<p align="center">
+  <img src="docs/figures/ftle_coherent_classification.png" width="85%"
+       alt="FTLE based coherent vs non-coherent neighbour classification"/>
+</p>
+
+<p align="center">
+  <em>Coherent neighbours (blue) vs non-coherent neighbours (red) around a
+  target particle, classified by the backward rate of separation. The
+  coherent pool drives the primary constraint; the non-coherent pool feeds
+  the phase-delayed secondary constraint. See the paper for full notation.</em>
+</p>
+
 Companion code for the preprint
 
 > Rahimi Khojasteh, A. et al. *Coherent motions to predict Lagrangian
@@ -18,6 +30,19 @@ The package implements three predictors compared in the paper:
 An Appendix C module also ships a tiny SIREN plus Fourier feature PINN
 (physics informed neural network) that reuses the same collocation targets
 inside a differentiable neural field.
+
+<p align="center">
+  <img src="docs/figures/p_vs_ps_comparison.png" width="85%"
+       alt="Polynomial vs Primary coherent vs Primary+Secondary coherent"/>
+</p>
+
+<p align="center">
+  <em>Headline result. Error reduction of Primary (P) and Primary+Secondary
+  (P+S) coherent predictors over the Polynomial baseline on 2D HIT DNS with
+  10% positional noise. P+S improves both velocity and acceleration
+  predictions; the lift is strongest on acceleration where the FD signal
+  to noise ratio is ~0.17.</em>
+</p>
 
 ---
 
@@ -135,6 +160,40 @@ coherent-predictor/
     ├── DATA.md               demo vs full DNS, download plan (Zenodo)
     └── METHOD.md             cost function, parameters, notation
 ```
+
+---
+
+## Appendix C — SIREN PINN
+
+The paper's Appendix C introduces a compact physics-informed neural field
+predictor. A tiny MLP with sinusoidal activations (SIREN) and Fourier
+feature inputs interpolates the trajectory while a collocation loss
+enforces the same coherent velocity and acceleration targets used by the
+polynomial solver. Smoothed acceleration targets and early-stopped
+L-BFGS-B prevent noise memorisation.
+
+<p align="center">
+  <img src="docs/figures/pinn_architecture.png" width="78%"
+       alt="SIREN plus Fourier feature PINN architecture (v7i-d)"/>
+</p>
+
+<p align="center">
+  <em>Neural field architecture. Fourier features (fixed) feed a single
+  SIREN hidden layer which outputs position; analytic autodiff gives
+  velocity and acceleration.</em>
+</p>
+
+<p align="center">
+  <img src="docs/figures/pinn_results.png" width="85%"
+       alt="SIREN PINN vs Polynomial and P+S on 2D HIT and 3D wake"/>
+</p>
+
+<p align="center">
+  <em>Error reduction of the SIREN PINN against Polynomial and P+S on
+  2D HIT (left) and 3D wake (right). SIREN wins on velocity in both
+  cases and matches or beats P+S on acceleration at the operating
+  noise level.</em>
+</p>
 
 ---
 
