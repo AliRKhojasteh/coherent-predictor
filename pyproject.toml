@@ -1,0 +1,63 @@
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "coherent-predictor"
+version = "1.0.0"
+description = "Coherent-motion constrained predictor of Lagrangian trajectories (preprint 2026)"
+readme = "README.md"
+requires-python = ">=3.9"
+license = { file = "LICENSE" }
+authors = [
+    { name = "Ali Rahimi Khojasteh" },
+]
+keywords = [
+    "lagrangian",
+    "particle-tracking",
+    "turbulence",
+    "coherent-structures",
+    "ftle",
+    "pinn",
+    "siren",
+    "fluid-mechanics",
+]
+classifiers = [
+    "Development Status :: 5 - Production/Stable",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.9",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Physics",
+]
+dependencies = [
+    "numpy>=1.22",
+    "scipy>=1.9",
+    "scikit-learn>=1.1",
+    "matplotlib>=3.5",
+]
+
+[project.optional-dependencies]
+pinn = [
+    "autograd>=1.5",
+]
+dev = [
+    "pytest>=7.0",
+    "nbformat>=5.7",
+    "jupyter>=1.0",
+]
+
+[project.urls]
+"Preprint"  = "https://arxiv.org/abs/2508.21191"
+"Source"    = "https://github.com/AliRKhojasteh/coherent-predictor"
+"Issues"    = "https://github.com/AliRKhojasteh/coherent-predictor/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+coherent_predictor = ["py.typed"]

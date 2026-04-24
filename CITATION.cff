@@ -1,0 +1,19 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite the preprint below."
+title: "Coherent-motion constrained predictor of Lagrangian trajectories"
+version: "1.0.0"
+date-released: 2026-04-24
+license: MIT
+authors:
+  - family-names: "Rahimi Khojasteh"
+    given-names: "Ali"
+repository-code: "https://github.com/AliRKhojasteh/coherent-predictor"
+preferred-citation:
+  type: article
+  title: "Coherent motions to predict Lagrangian trajectories"
+  authors:
+    - family-names: "Rahimi Khojasteh"
+      given-names: "Ali"
+  year: 2026
+  notes: "Preprint, under review at Journal of Fluid Mechanics"
+  url: "https://arxiv.org/abs/2508.21191"
