@@ -1,16 +1,18 @@
 # Coherent motions to predict Lagrangian trajectories
 
 <p align="center">
-  <img src="docs/figures/fig11_position_error_z_averaged.png" width="92%"
-       alt="Instantaneous position estimation error averaged in z direction: DNS, Polynomial, Wiener, Coherent"/>
+  <img src="docs/figures/supplementary_movie_1.gif" width="92%"
+       alt="Supplementary Movie 1 - Instantaneous position estimation error averaged in z direction: DNS, Polynomial, Wiener, Coherent"/>
 </p>
 
 <p align="center">
-  <em>Figure 11 of the preprint. Instantaneous position estimation error
+  <em>Supplementary Movie 1. Instantaneous position estimation error
   averaged in the z direction: (a) DNS predictor, (b) Polynomial predictor,
   (c) Wiener filter, (d) Coherent predictor. The Coherent predictor
   (panel d) narrows and dims the error field relative to the polynomial
-  and Wiener baselines.</em>
+  and Wiener baselines over time.
+  <br/>Higher resolution MP4:
+  <a href="docs/figures/supplementary_movie_1.mp4">supplementary_movie_1.mp4</a></em>
 </p>
 
 <p align="center">
