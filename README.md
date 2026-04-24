@@ -1,6 +1,19 @@
 # Coherent motions to predict Lagrangian trajectories
 
 <p align="center">
+  <img src="docs/figures/fig11_position_error_z_averaged.png" width="92%"
+       alt="Instantaneous position estimation error averaged in z direction: DNS, Polynomial, Wiener, Coherent"/>
+</p>
+
+<p align="center">
+  <em>Figure 11 of the preprint. Instantaneous position estimation error
+  averaged in the z direction: (a) DNS predictor, (b) Polynomial predictor,
+  (c) Wiener filter, (d) Coherent predictor. The Coherent predictor
+  (panel d) narrows and dims the error field relative to the polynomial
+  and Wiener baselines. Also shown in Supplementary Movie 1.</em>
+</p>
+
+<p align="center">
   <img src="docs/figures/ftle_coherent_classification.png" width="85%"
        alt="FTLE based coherent vs non-coherent neighbour classification"/>
 </p>
@@ -9,7 +22,7 @@
   <em>Coherent neighbours (blue) vs non-coherent neighbours (red) around a
   target particle, classified by the backward rate of separation. The
   coherent pool drives the primary constraint; the non-coherent pool feeds
-  the phase-delayed secondary constraint. See the paper for full notation.</em>
+  the phase-delayed secondary constraint.</em>
 </p>
 
 Companion code for the preprint
