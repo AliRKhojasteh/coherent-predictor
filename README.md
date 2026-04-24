@@ -1,55 +1,24 @@
 # Coherent motions to predict Lagrangian trajectories
 
 <p align="center">
-  <img src="docs/figures/supplementary_movie_1.gif" width="92%"
-       alt="Supplementary Movie 1 - Instantaneous position estimation error averaged in z direction: DNS, Polynomial, Wiener, Coherent"/>
-</p>
-
-<p align="center">
-  <em>Supplementary Movie 1. Instantaneous position estimation error
-  averaged in the z direction: (a) DNS predictor, (b) Polynomial predictor,
-  (c) Wiener filter, (d) Coherent predictor. The Coherent predictor
-  (panel d) narrows and dims the error field relative to the polynomial
-  and Wiener baselines over time.
-  <br/>Higher resolution MP4:
-  <a href="docs/figures/supplementary_movie_1.mp4">supplementary_movie_1.mp4</a></em>
-</p>
-
-<p align="center">
-  <img src="docs/figures/ftle_coherent_classification.png" width="85%"
-       alt="FTLE based coherent vs non-coherent neighbour classification"/>
+  <img src="docs/figures/supplementary_movie_1.gif" width="92%"/>
 </p>
 
 Companion code for the preprint
 
 > Rahimi Khojasteh, A. et al. *Coherent motions to predict Lagrangian
-> trajectories*. arXiv preprint, 2026. Under review at the Journal of Fluid
-> Mechanics. <https://arxiv.org/abs/2508.21191>
+> trajectories*. arXiv preprint, 2026. <https://arxiv.org/abs/2508.21191>
 
-The package implements three predictors compared in the paper:
+## What the code does
 
-1. **Polynomial** baseline (Novara and Scarano style polynomial extrapolation)
-2. **Primary coherent (P)** — polynomial plus velocity and acceleration
-   constraints built from FTLE filtered coherent neighbours at the last
-   history snapshot
-3. **Primary plus Secondary (P+S)** — P augmented with phase delayed
-   constraints at the target snapshot, drawn from the non coherent pool
-
-An Appendix C module also ships a tiny SIREN plus Fourier feature PINN
-(physics informed neural network) that reuses the same collocation targets
-inside a differentiable neural field.
+Given noisy tracks of fluid tracer particles, the code predicts where each
+particle will be at the next time step. It borrows velocity and
+acceleration cues from nearby particles moving in lockstep (coherent
+neighbours) and uses them to correct a polynomial extrapolation, delivering
+lower error than classical polynomial or Wiener-filter predictors.
 
 <p align="center">
-  <img src="docs/figures/p_vs_ps_comparison.png" width="85%"
-       alt="Polynomial vs Primary coherent vs Primary+Secondary coherent"/>
-</p>
-
-<p align="center">
-  <em>Headline result. Error reduction of Primary (P) and Primary+Secondary
-  (P+S) coherent predictors over the Polynomial baseline on 2D HIT DNS with
-  10% positional noise. P+S improves both velocity and acceleration
-  predictions; the lift is strongest on acceleration where the FD signal
-  to noise ratio is ~0.17.</em>
+  <img src="docs/figures/p_vs_ps_comparison.png" width="85%"/>
 </p>
 
 ---
@@ -181,26 +150,11 @@ polynomial solver. Smoothed acceleration targets and early-stopped
 L-BFGS-B prevent noise memorisation.
 
 <p align="center">
-  <img src="docs/figures/pinn_architecture.png" width="78%"
-       alt="SIREN plus Fourier feature PINN architecture (v7i-d)"/>
+  <img src="docs/figures/pinn_architecture.png" width="78%"/>
 </p>
 
 <p align="center">
-  <em>Neural field architecture. Fourier features (fixed) feed a single
-  SIREN hidden layer which outputs position; analytic autodiff gives
-  velocity and acceleration.</em>
-</p>
-
-<p align="center">
-  <img src="docs/figures/pinn_results.png" width="85%"
-       alt="SIREN PINN vs Polynomial and P+S on 2D HIT and 3D wake"/>
-</p>
-
-<p align="center">
-  <em>Error reduction of the SIREN PINN against Polynomial and P+S on
-  2D HIT (left) and 3D wake (right). SIREN wins on velocity in both
-  cases and matches or beats P+S on acceleration at the operating
-  noise level.</em>
+  <img src="docs/figures/pinn_results.png" width="85%"/>
 </p>
 
 ---
@@ -231,7 +185,7 @@ publication.
   author       = {Rahimi Khojasteh, Ali and others},
   title        = {Coherent motions to predict Lagrangian trajectories},
   year         = {2026},
-  note         = {Preprint, under review at Journal of Fluid Mechanics},
+  note         = {Preprint},
   eprint       = {2508.21191},
   archivePrefix= {arXiv},
   url          = {https://arxiv.org/abs/2508.21191}
