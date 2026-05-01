@@ -182,7 +182,7 @@ publication.
 
 ```bibtex
 @misc{RahimiKhojasteh2026_preprint,
-  author       = {Rahimi Khojasteh, Ali and others},
+  author       = {Rahimi Khojasteh, Ali and Heitz, Dominique},
   title        = {Coherent motions to predict Lagrangian trajectories},
   year         = {2026},
   note         = {Preprint},
@@ -192,7 +192,7 @@ publication.
 }
 
 @software{coherent_predictor_2026,
-  author  = {Rahimi Khojasteh, Ali},
+  author  = {Rahimi Khojasteh, Ali and Heitz, Dominique},
   title   = {coherent-predictor: companion code for Rahimi Khojasteh et al. (2026)},
   year    = {2026},
   version = {1.0.0},
