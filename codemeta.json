@@ -1,0 +1,63 @@
+{
+    "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
+    "type": "SoftwareSourceCode",
+    "applicationCategory": "Fluid Mechanics",
+    "author": [
+        {
+            "id": "https://orcid.org/0000-0002-3545-8391",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "Delft University of Technology"
+            },
+            "email": "A.R.Khojasteh@tudelft.nl",
+            "familyName": "Rahimi Khojasteh",
+            "givenName": "Ali"
+        },
+        {
+            "type": "schema:Role",
+            "schema:author": "https://orcid.org/0000-0002-3545-8391",
+            "schema:roleName": "Developper"
+        }
+    ],
+    "codeRepository": "https://github.com/AliRKhojasteh/coherent-predictor",
+    "contributor": [
+        {
+            "id": "https://orcid.org/0000-0001-6295-2822",
+            "type": "Person",
+            "affiliation": {
+                "type": "Organization",
+                "name": "INRAE"
+            },
+            "email": "dominique.heitz@inrae.fr",
+            "familyName": "Heitz",
+            "givenName": "Dominique"
+        },
+        {
+            "type": "schema:Role",
+            "contributor": "https://orcid.org/0000-0001-6295-2822"
+        }
+    ],
+    "dateModified": "2026-04-24",
+    "datePublished": "2026-04-24",
+    "description": "Given noisy tracks of fluid tracer particles, the code predicts where each particle will be at the next time step. It borrows velocity and acceleration cues from nearby particles moving in lockstep (coherent neighbours) and uses them to correct a polynomial extrapolation, delivering lower error than classical polynomial or Wiener-filter predictors.",
+    "funder": {
+        "type": "Organization",
+        "name": "INRAE"
+    },
+    "keywords": [
+        "Lagrangian Particle Tracking",
+        "Particle Tracking Velocimetry"
+    ],
+    "license": "https://spdx.org/licenses/MIT",
+    "name": "coherent-predictor",
+    "operatingSystem": [
+        "Linux",
+        "Windows",
+        "MacOs"
+    ],
+    "programmingLanguage": "Python",
+    "version": "1.0.0",
+    "developmentStatus": "active",
+    "referencePublication": " https://doi.org/10.48550/arXiv.2508.21191"
+}
