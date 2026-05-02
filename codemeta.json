@@ -1,4 +1,4 @@
-{
+
     "@context": "https://doi.org/10.5063/schema/codemeta-2.0",
     "type": "SoftwareSourceCode",
     "applicationCategory": "Fluid Mechanics",
@@ -18,16 +18,13 @@
             "type": "schema:Role",
             "schema:author": "https://orcid.org/0000-0002-3545-8391",
             "schema:roleName": "Developper"
-        }
-    ],
-    "codeRepository": "https://github.com/AliRKhojasteh/coherent-predictor",
-    "contributor": [
+        },
         {
             "id": "https://orcid.org/0000-0001-6295-2822",
             "type": "Person",
             "affiliation": {
                 "type": "Organization",
-                "name": "INRAE"
+                "name": "Department of Mathematics and Digital Technologies"
             },
             "email": "dominique.heitz@inrae.fr",
             "familyName": "Heitz",
@@ -35,9 +32,11 @@
         },
         {
             "type": "schema:Role",
-            "contributor": "https://orcid.org/0000-0001-6295-2822"
+            "schema:author": "https://orcid.org/0000-0001-6295-2822",
+            "schema:roleName": "Management"
         }
     ],
+    "codeRepository": "https://github.com/AliRKhojasteh/coherent-predictor",
     "dateModified": "2026-04-24",
     "datePublished": "2026-04-24",
     "description": "Given noisy tracks of fluid tracer particles, the code predicts where each particle will be at the next time step. It borrows velocity and acceleration cues from nearby particles moving in lockstep (coherent neighbours) and uses them to correct a polynomial extrapolation, delivering lower error than classical polynomial or Wiener-filter predictors.",
@@ -59,5 +58,5 @@
     "programmingLanguage": "Python",
     "version": "1.0.0",
     "developmentStatus": "active",
-    "referencePublication": " https://doi.org/10.48550/arXiv.2508.21191"
+    "referencePublication": "https://doi.org/10.48550/arXiv.2508.21191"
 }
