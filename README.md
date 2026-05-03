@@ -193,14 +193,19 @@ publication.
 
 @software{coherent_predictor_2026,
   author  = {Rahimi Khojasteh, Ali and Heitz, Dominique},
-  title   = {coherent-predictor: companion code for Rahimi Khojasteh et al. (2026)},
+  title   = {coherent-predictor},
   year    = {2026},
   version = {1.0.0},
-  url     = {https://github.com/AliRKhojasteh/coherent-predictor}
+  url     = {https://hal.inrae.fr/hal-05609711}
 }
 ```
 
-A machine readable version is in [`CITATION.cff`](CITATION.cff).
+The software is archived on Software Heritage and registered on HAL at
+<https://hal.inrae.fr/hal-05609711>. The development version lives on
+GitHub at <https://github.com/AliRKhojasteh/coherent-predictor>.
+
+A machine readable version of the citation metadata is in
+[`CITATION.cff`](CITATION.cff).
 
 ---
 

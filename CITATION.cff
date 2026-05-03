@@ -1,19 +1,28 @@
 cff-version: 1.2.0
-message: "If you use this software, please cite the preprint below."
-title: "Coherent-motion constrained predictor of Lagrangian trajectories"
+message: "If you use this software, please cite the software (HAL) and the preprint (arXiv) below."
+title: "coherent-predictor"
 version: "1.0.0"
 date-released: 2026-04-24
 license: MIT
 authors:
   - family-names: "Rahimi Khojasteh"
     given-names: "Ali"
+  - family-names: "Heitz"
+    given-names: "Dominique"
 repository-code: "https://github.com/AliRKhojasteh/coherent-predictor"
+url: "https://hal.inrae.fr/hal-05609711"
+identifiers:
+  - type: url
+    value: "https://hal.inrae.fr/hal-05609711"
+    description: "HAL deposit (archived on Software Heritage)"
 preferred-citation:
   type: article
   title: "Coherent motions to predict Lagrangian trajectories"
   authors:
     - family-names: "Rahimi Khojasteh"
       given-names: "Ali"
+    - family-names: "Heitz"
+      given-names: "Dominique"
   year: 2026
   notes: "Preprint"
   url: "https://arxiv.org/abs/2508.21191"
