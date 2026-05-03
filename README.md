@@ -37,8 +37,6 @@ and runs end to end on a CPU kernel.
 | `02_siren_pinn.ipynb` | Appendix C. SIREN+Fourier PINN v7i-d on 2D HIT and 3D wake | [Open in Colab](https://colab.research.google.com/github/AliRKhojasteh/coherent-predictor/blob/main/notebooks/02_siren_pinn.ipynb) |
 | `03_ftle_evaluation.ipynb` | Integration time sweep, coherent fraction vs T, alpha optimisation | [Open in Colab](https://colab.research.google.com/github/AliRKhojasteh/coherent-predictor/blob/main/notebooks/03_ftle_evaluation.ipynb) |
 
-Replace `AliRKhojasteh` with the GitHub owner once the repository is pushed.
-
 ### Option B — Local install
 
 ```bash
