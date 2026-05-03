@@ -10,10 +10,10 @@ authors:
   - family-names: "Heitz"
     given-names: "Dominique"
 repository-code: "https://github.com/AliRKhojasteh/coherent-predictor"
-url: "https://hal.inrae.fr/hal-05609711"
+url: "https://hal.inrae.fr/hal-05609886"
 identifiers:
   - type: url
-    value: "https://hal.inrae.fr/hal-05609711"
+    value: "https://hal.inrae.fr/hal-05609886"
     description: "HAL deposit (archived on Software Heritage)"
 preferred-citation:
   type: article

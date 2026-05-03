@@ -194,12 +194,12 @@ publication.
   title   = {coherent-predictor},
   year    = {2026},
   version = {1.0.0},
-  url     = {https://hal.inrae.fr/hal-05609711}
+  url     = {https://hal.inrae.fr/hal-05609886}
 }
 ```
 
 The software is archived on Software Heritage and registered on HAL at
-<https://hal.inrae.fr/hal-05609711>. The development version lives on
+<https://hal.inrae.fr/hal-05609886>. The development version lives on
 GitHub at <https://github.com/AliRKhojasteh/coherent-predictor>.
 
 A machine readable version of the citation metadata is in
